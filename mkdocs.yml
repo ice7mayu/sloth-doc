@@ -1,0 +1,38 @@
+site_name: Sloth Framework
+copyright: Copyright &copy; 2022 maintained by mayu
+# repo_url: git@git.zuoyebang.cc:inno_newhw_test/sloth-doc.git
+# edit_uri: edit/dev/docs
+
+# The material theme settings
+theme: 
+  name: material
+  language: en
+  # feature:
+  #   tabs: false # Whether display level 1 header as tabs
+
+# extra:
+#   social: # Display social links in footer
+#     - type: github
+#       link: git@git.zuoyebang.cc:inno_newhw_test/sloth-doc.git
+
+plugins:
+  - search
+  # - git-revision-date-localized: # Display last update time in git repo
+  #     type: iso_datetime
+
+# Enable some useful extensions.
+# markdown_extensions:
+#   - admonition
+#   - codehilite:
+#       linenums: false
+#   - toc:
+#       permalink: true
+#   - pymdownx.details
+#   - pymdownx.keys
+#   - pymdownx.mark
+#   - pymdownx.tasklist
+
+# The site navigation
+nav:
+  - Home: index.md
+  - Intro: intro/intro.md
