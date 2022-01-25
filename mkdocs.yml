@@ -36,3 +36,4 @@ plugins:
 nav:
   - Home: index.md
   - Intro: intro/intro.md
+  - VSCode: vscode.md
