@@ -21,7 +21,7 @@ Appium 的核心是由 nodejs 编写的一个 http 服务, 提供丰富的 REST 
 客户端脚本按照 JSON Wire Protocol 与服务端通过 REST API 进行通信.
 Appium 通过 Desired Capabilities 来实现兼容不同平台, 并启动运行App.
 
-```python
+``` python
   capabilities = {
     "platformName": "Android",
     "platformVersion": "8",

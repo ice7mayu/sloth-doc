@@ -1,36 +1,48 @@
 site_name: Sloth Framework
 copyright: Copyright &copy; 2022 maintained by mayu
-# repo_url: git@git.zuoyebang.cc:inno_newhw_test/sloth-doc.git
-# edit_uri: edit/dev/docs
+repo_url: https://git.zuoyebang.cc/inno_newhw_test/sloth
+repo_name: inno_newhw_test/sloth
 
 # The material theme settings
-theme: 
+theme:
   name: material
   language: en
-  # feature:
-  #   tabs: false # Whether display level 1 header as tabs
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: red
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/gitlab
 
-# extra:
-#   social: # Display social links in footer
-#     - type: github
-#       link: git@git.zuoyebang.cc:inno_newhw_test/sloth-doc.git
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - announce.dismissÎ
+    - navigation.tracking
+    - toc.integrate
+    - navigation.top
 
 plugins:
   - search
-  # - git-revision-date-localized: # Display last update time in git repo
-  #     type: iso_datetime
+  - git-revision-date-localized:
+      type: date
 
-# Enable some useful extensions.
-# markdown_extensions:
-#   - admonition
-#   - codehilite:
-#       linenums: false
-#   - toc:
-#       permalink: true
-#   - pymdownx.details
-#   - pymdownx.keys
-#   - pymdownx.mark
-#   - pymdownx.tasklist
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: false
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 # The site navigation
 nav:
