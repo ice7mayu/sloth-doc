@@ -1,4 +1,4 @@
-# Sloth Documentation
+# Sloth Document
 
 ## Setup venv
 

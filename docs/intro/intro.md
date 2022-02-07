@@ -55,4 +55,89 @@ Appium 通过 Desired Capabilities 来实现兼容不同平台, 并启动运行A
 
 ## 代码演示
 
+```python
+import time
+
+from appium import webdriver
+from appium.webdriver.common.appiumby import AppiumBy
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support.wait import WebDriverWait
+
+from corelib.log import log
+
+def test_login():
+    serial = 'MGF6R20728000050'  # 手机序列号
+    pkg_name = 'com.zuoyebang.iotunion'
+    activity = 'com.zuoyebang.iot.union.ui.InitActivity'
+
+    caps = {
+        'platformName': 'Android',
+        'automationName': 'Uiautomator2',
+        'newCommandTimeout': 300,
+        'udid': serial,
+        'appPackage': pkg_name,
+        'appActivity': activity,
+        'noReset': True,
+    }
+    driver = webdriver.Remote(
+        command_executor='http://127.0.0.1:4723/wd/hub', desired_capabilities=caps
+    )
+    driver.implicitly_wait(5)
+    log.info('Launching app ...')
+    time.sleep(5)
+
+    # 登录页面 (验证页面标题: 登录发现更多精彩)
+    locator = (AppiumBy.ID, 'com.zuoyebang.iotunion:id/tv_title')
+    WebDriverWait(driver, timeout=5).until(ec.presence_of_element_located(locator))
+    title = driver.find_element(*locator)
+    expected_title = '登录发现更多精彩'
+    assert title.text == expected_title
+    log.info(f'校验标题为: {expected_title} 通过')
+
+    # check 同意EULA
+    agree = driver.find_element(
+        by=AppiumBy.ID, value='com.zuoyebang.iotunion:id/cb_user_agreement'
+    )
+    time.sleep(1)
+    checked = agree.get_attribute('checked')
+    log.info(f'{checked=}')
+    if checked == 'false':
+        agree.click()
+
+    # 输入手机号
+    cell_phone = driver.find_element(
+        by=AppiumBy.ID, value='com.zuoyebang.iotunion:id/et_phone'
+    )
+    cell_phone.set_text('13412345678')
+    log.info('输入手机号: 13412345678')
+
+    # 点击获取验证码
+    send_code = driver.find_element(
+        by=AppiumBy.ID, value='com.zuoyebang.iotunion:id/tv_send_verification_code'
+    )
+    send_code.click()
+    log.info('点击 获取验证码')
+    time.sleep(2)  # 页面过度时间
+
+    # 输入验证码
+    v_code = '1111'
+    for i in range(4):
+        code = driver.find_element(
+            by=AppiumBy.ID, value=f'com.zuoyebang.iotunion:id/et_verification_code_{i}'
+        )
+        code.set_text(v_code[i])
+    log.info(f'输入验证码: {v_code}')
+
+    # 获取toast
+    locator = (AppiumBy.XPATH, '//*[contains(@text,"登录成")]')  # 文本部分匹配
+    toast = WebDriverWait(driver, timeout=5).until(lambda d: d.find_element(*locator))
+    expected_toast = '登录成功'
+    assert toast.text == expected_toast
+    log.info('登录成功')
+
+    log.info('观看手机画面5秒')
+    time.sleep(5)
+    driver.quit()  # 释放WebDriver
+```
+
 [appium]: https://appium.io/
