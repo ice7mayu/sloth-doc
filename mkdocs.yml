@@ -1,7 +1,8 @@
 site_name: Sloth Framework
+site_dir: public
+site_url: http://mayu08.gitpages.zuoyebang.cc/sloth-doc
+
 copyright: Copyright &copy; 2022 maintained by mayu
-repo_url: https://git.zuoyebang.cc/inno_newhw_test/sloth
-repo_name: inno_newhw_test/sloth
 
 # The material theme settings
 theme:
@@ -49,3 +50,4 @@ nav:
   - Home: index.md
   - Intro: intro/intro.md
   - VSCode: vscode.md
+  - SSH Key: ssh-key.md

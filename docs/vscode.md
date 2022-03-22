@@ -11,26 +11,29 @@ Add below content to **.vscode/tasks.json** then **Command Palette** -> **Run Te
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "clear",
+      "label": "Coverage",
       "type": "shell",
-      "command": "./bin/clear.sh",
-      "group": "test",
-      "problemMatcher": []
+      "command": "source .venv/bin/activate && coverage run; coverage html && deactivate",
+      "group": "test"
     },
     {
-      "label": "cov",
+      "label": "Format",
       "type": "shell",
-      "command": "source .venv/bin/activate && bin/cov.sh && deactivate",
-      "group": "test",
-      "problemMatcher": []
+      "command": "source .venv/bin/activate && black sloth tests; isort sloth tests && deactivate",
+      "group": "test"
     },
     {
-      "label": "allure-report",
+      "label": "Clear",
       "type": "shell",
-      "command": "./bin/allure-report.sh",
-      "group": "test",
-      "problemMatcher": []
-    }
+      "command": "bin/clear.sh",
+      "group": "test"
+    },
+    {
+      "label": "Allure",
+      "type": "shell",
+      "command": "allure serve output/allure-results",
+      "group": "test"
+    },
   ]
 }
 ```
