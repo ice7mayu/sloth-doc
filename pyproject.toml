@@ -1,0 +1,22 @@
+[tool.poetry]
+authors = ["mayu08 <mayu08@zuoyebang.com>"]
+description = ""
+name = "sloth-doc"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mkdocs = "^1.2.3"
+mkdocs-material = "^8.1.8"
+mkdocs-git-revision-date-localized-plugin = "^0.11.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[[tool.poetry.source]]
+default = true
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
