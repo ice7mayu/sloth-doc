@@ -1,33 +1,20 @@
 # Sloth Documentation
 
-## Setup venv
-
-Create venv
+## Setup
 
 ```shell
-python3 -m venv .venv
+poetry install --no-root
 ```
 
-Activate venv
+## Serve
 
 ```shell
-source .venv/bin/activate
+poetry run mkdocs serve
 ```
 
-Install required packages:
+## Build & Deploy
 
 ```shell
-(.venv) pip install -r requirements
-```
-
-Serve the doc locally:
-
-```shell
-(.venv) mkdocs serve
-```
-
-Shutdown venv
-
-```shell
-(.venv) deactivate
+poetry run mkdocs build
+bash deploy.sh
 ```
