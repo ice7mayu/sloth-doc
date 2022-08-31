@@ -48,6 +48,9 @@ markdown_extensions:
 # The site navigation
 nav:
   - Home: index.md
-  - Intro: intro/intro.md
-  - VSCode: vscode.md
-  - SSH Key: ssh-key.md
+  - Appium: intro/intro.md
+  - Environment: 
+    - VSCode: env/vscode.md
+    - SSH Key: env/ssh-key.md
+  - Watch Project:
+    - Monkey Test: watch/monkey.md
