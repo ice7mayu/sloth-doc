@@ -53,4 +53,5 @@ nav:
     - VSCode: env/vscode.md
     - SSH Key: env/ssh-key.md
   - Watch Project:
+    - Batch Runner: watch/batch-runner.md
     - Monkey Test: watch/monkey.md
