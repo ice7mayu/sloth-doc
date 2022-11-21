@@ -9,13 +9,13 @@ theme:
   name: material
   language: en
   palette:
-    - media: '(prefers-color-scheme: light)'
+    - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
-    - media: '(prefers-color-scheme: dark)'
+    - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: red
       toggle:
@@ -48,10 +48,11 @@ markdown_extensions:
 # The site navigation
 nav:
   - Home: index.md
+  - Manual:
+      - Sync Report: manual/sync-report.md
+      - Batch Runner: manual/batch-runner.md
+      - Monkey Test: manual/monkey.md
   - Appium: intro/intro.md
-  - Environment: 
-    - VSCode: env/vscode.md
-    - SSH Key: env/ssh-key.md
-  - Watch Project:
-    - Batch Runner: watch/batch-runner.md
-    - Monkey Test: watch/monkey.md
+  - Environment:
+      - VSCode: env/vscode.md
+      - SSH Key: env/ssh-key.md
