@@ -15,6 +15,5 @@ poetry run mkdocs serve
 ## Build & Deploy
 
 ```shell
-poetry run mkdocs build
 bash deploy.sh
 ```

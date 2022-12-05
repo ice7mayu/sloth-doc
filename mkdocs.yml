@@ -54,5 +54,6 @@ nav:
       - Monkey Test: manual/monkey.md
   - Appium: intro/intro.md
   - Environment:
+      - Setup: env/setup.md
       - VSCode: env/vscode.md
       - SSH Key: env/ssh-key.md
