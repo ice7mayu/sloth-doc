@@ -152,6 +152,12 @@ poetry run python run.py tests/test_login.py
 poetry run python run.py tests/test_login.py::test_login_as_student
 ```
 
+执行模块中标记为 `p0` 的测试用例:
+
+```bash
+poetry run python run.py tests/test_login.py -m p0
+```
+
 本地查看Allure报告
 
 ```bash
