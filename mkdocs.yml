@@ -48,12 +48,11 @@ markdown_extensions:
 # The site navigation
 nav:
   - Home: index.md
-  - Manual:
-      - Sync Report: manual/sync-report.md
-      - Batch Runner: manual/batch-runner.md
-      - Monkey Test: manual/monkey.md
-  - Appium: intro/intro.md
   - Environment:
       - Setup: env/setup.md
       - VSCode: env/vscode.md
       - SSH Key: env/ssh-key.md
+  - Manual:
+      - Sync Report: manual/sync-report.md
+      - Monkey Test: manual/monkey.md
+  - Appium: intro/intro.md
