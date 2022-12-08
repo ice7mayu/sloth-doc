@@ -13,7 +13,7 @@
 
 2 ~ 6 可以通过 Homebrew 安装.
 
-```shell
+```bash
 brew install git
 brew install python@3.10
 brew install poetry
@@ -24,7 +24,7 @@ brew install node
 
 安装 Appium Server:
 
-```shell
+```bash
 npm install -g appium
 ```
 
@@ -32,7 +32,7 @@ npm install -g appium
 
 修改 [poetry][poetry-venv-in-project] 虚拟环境目录配置项:
 
-```shell
+```bash
 poetry config virtualenvs.in-project true
 ```
 
@@ -40,13 +40,13 @@ poetry config virtualenvs.in-project true
 
 进入项目根目录并安装项目依赖, 例如: zwatch 项目
 
-```shell
+```bash
 cd zwatch && poetry install --no-root
 ```
 
 安装 git 提交检查工具:
 
-```shell
+```bash
 poetry run pre-commit install
 ```
 
@@ -99,7 +99,6 @@ code --install-extension yzhang.markdown-all-in-one
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
     "python.linting.pylintEnabled": true,
-    "markdown-preview-enhanced.previewTheme": "one-dark.css",
     "[markdown]": {
         "editor.defaultFormatter": "yzhang.markdown-all-in-one"
     }
@@ -129,13 +128,13 @@ code --install-extension yzhang.markdown-all-in-one
 
 从 `main` 分支获取最新的代码
 
-```shell
+```bash
 git checkout main && git pull
 ```
 
 升级框架
 
-```shell
+```bash
 poetry update sloth
 ```
 
