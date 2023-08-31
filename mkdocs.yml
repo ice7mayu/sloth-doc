@@ -2,7 +2,7 @@ site_name: Sloth Framework
 site_dir: public
 site_url: http://mayu08.gitpages.zuoyebang.cc/sloth-doc
 
-copyright: Copyright &copy; 2022 maintained by mayu
+copyright: Copyright &copy; 2022 maintained by MaYu
 
 # The material theme settings
 theme:
@@ -48,11 +48,13 @@ markdown_extensions:
 # The site navigation
 nav:
   - Home: index.md
-  - Environment:
-      - Setup: env/setup.md
-      - VSCode: env/vscode.md
-      - SSH Key: env/ssh-key.md
-  - Manual:
-      - Sync Report: manual/sync-report.md
-      - Monkey Test: manual/monkey.md
-  - Appium: intro/intro.md
+  - Getting started:
+      - Installation: getting-started/installation.md
+      - Project structure: getting-started/project-structure.md
+      - The first case: getting-started/the-first-case.md
+      - Allure report: getting-started/allure-report.md
+  - Guide:
+      - Locate element: guide/locate-element.md
+      - Task executor: guide/task-executor.md
+      - Work with multiple devices: guide/work-with-multiple-devices.md
+      - Voice engine: guide/voice-engine.md
