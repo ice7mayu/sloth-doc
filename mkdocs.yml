@@ -54,7 +54,7 @@ nav:
       - The first case: getting-started/the-first-case.md
       - Allure report: getting-started/allure-report.md
   - Guide:
-      - Locate element: guide/locate-element.md
+      - Element locating: guide/element-locating.md
       - Task executor: guide/task-executor.md
-      - Work with multiple devices: guide/work-with-multiple-devices.md
+      - Working with multiple devices: guide/working-with-multiple-devices.md
       - Voice engine: guide/voice-engine.md

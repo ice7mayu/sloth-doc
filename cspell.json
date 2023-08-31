@@ -7,6 +7,7 @@
         "Appium",
         "inlinehilite",
         "linenums",
+        "mediatek",
         "pymdownx",
         "pyproject"
     ],
