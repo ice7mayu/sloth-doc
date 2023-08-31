@@ -7,7 +7,8 @@
         "Appium",
         "inlinehilite",
         "linenums",
-        "pymdownx"
+        "pymdownx",
+        "pyproject"
     ],
     "ignoreWords": [],
     "import": [],
