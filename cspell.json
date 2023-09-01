@@ -9,7 +9,8 @@
         "linenums",
         "mediatek",
         "pymdownx",
-        "pyproject"
+        "pyproject",
+        "udid"
     ],
     "ignoreWords": [],
     "import": [],
