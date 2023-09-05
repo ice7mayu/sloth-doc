@@ -1,9 +1,8 @@
-# Element Locating
+# 定位元素
 
-UI element locating logics should be encapsulated in `page` modules under `pom` package.
+定位元素的代码逻辑通常被封装在 `page` 类型的模块里.
 
-To locate the shutter button of the system camera app.
-First create a `CameraPage` to hold the UI elements along with possible actions:
+以定位系统相机应用中的拍照按钮为例, 首先创建一个 `CameraPage` 类型来定位按钮元素并执行 `click` 事件:
 
 ```python
 # pom/camerapage.py
@@ -22,7 +21,7 @@ class CameraPage(PadPage):
         return self
 ```
 
-Then create an instance of the `CameraPage` inside camera task module to perform desired actions:
+然后在对应的任务模块中实例化 `CameraPage` 类型来完成拍照任务:
 
 ```python
 # task/cameratask.py
@@ -32,41 +31,39 @@ from pom.camerapage import CameraPage
 
 def take_picture(actor: PadActor):
     camera_page = CameraPage(actor.app)
-    camera_page.click_shutter() 
+    camera_page.click_shutter()
 ```
 
-## Other element locating methods
+## 常用的定位元素方法
 
-To locate element with class name:
+使用 `class_name` 定位元素:
 
 ```python
 locator = UiSelector().class_name("android.widget.TextView")
 ```
 
-To locate element with text:
+使用 `text` 定位元素:
 
 ```python
 locator = UiSelector().text("ELEMENT DISPLAY TEXT")
 ```
 
-To locate element with xpath:
+使用 `xpath` 定位元素:
 
 ```python
 locator = UiSelector().xpath("//android.view.ViewGroup/android.widget.TextView")
 ```
 
-## Wait element state
+## 等待元素状态
 
-The `Waiter` class takes care of locating element and waiting until a certain state under the hood.
-The `wait` method in `Page` class can be used for this purpose.
-
-To locate an element and wait until it's present:
+在定位元素时, 有时需要等待元素变为特定的状态后再返回预期的结果. `Page` 类型中的 `wait` 方法提供了一系列等待元素状态的方式.
+例如, 等待元素变为可见状态:
 
 ```python
 self.wait().until_element_present(locator)
 ```
 
-Wait until a checkbox element is checked:
+等待复选框元素变为选中状态:
 
 ```python
 self.wait().until_element_checked(locator)
