@@ -13,7 +13,8 @@
         "pymdownx",
         "pyproject",
         "sdcard",
-        "udid"
+        "udid",
+        "venv"
     ],
     "ignoreWords": [],
     "import": [],
