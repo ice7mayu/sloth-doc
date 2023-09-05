@@ -1,8 +1,8 @@
-# Voice Engine
+# 语音引擎
 
-Sloth provides a global `assistant` TTS helper instance to play voice audio which can be used againt voice assistant related tests.
+Sloth 提供了一个TTS语音引擎 `assistant` 来播放语音指令, 可以用来测试语音助手相关功能.
 
-To wake up the voice assistant and play a voice command:
+唤醒语音助手并执行语音指令:
 
 ```python
 from lib.assistant import assistant
@@ -14,7 +14,7 @@ assistant.wake_up()
 assistant.say("TEXT COMMAND")
 ```
 
-To adjust speech rate to a suitable value before playing:
+调整语音播放速度:
 
 ```python
 assistant.rate = 200
