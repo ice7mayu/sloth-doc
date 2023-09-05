@@ -4,12 +4,15 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
+        "adbutil",
         "Appium",
+        "DCIM",
         "inlinehilite",
         "linenums",
         "mediatek",
         "pymdownx",
         "pyproject",
+        "sdcard",
         "udid"
     ],
     "ignoreWords": [],
