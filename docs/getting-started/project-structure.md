@@ -1,29 +1,28 @@
-# Sloth Project Structure
+# Sloth 项目结构
 
-This page provides an overview of the file and folder structure of sloth test project.
-It covers top-level files and folders with descriptions.
+本文档介绍项目目录和文件结构.
 
-## Top-level folders
+## 目录介绍
 
-| Folder Name   | Description  |
+| 目录名称   | 描述  |
 |---|---|
-| `sloth`  | Sloth core modules  |
-| `pom`  | Page object modules  |
-| `task`  | Screenplay tasks  |
-| `lib`  | Common modules and helper functions  |
-| `tests`  | All test cases  |
-| `data`  | Stores test data in YAML format  |
-| `bin`  | Shell scripts  |
-| `output`  | Artifact and report output direcotry  |
-| `temp`  | The temp direcotry  |
+| `sloth`  | Sloth 核心模块  |
+| `pom`  | POM模块  |
+| `task`  | Screenplay 任务模块  |
+| `lib`  | 通用函数模块  |
+| `tests`  | 测试用例模块  |
+| `data`  | 测试数据  |
+| `bin`  | Shell 脚本  |
+| `output`  | 日志报告等输出目录  |
+| `temp`  | 临时文件目录  |
 
-## Top-level files
+## 文件介绍
 
-| File Name   | Description  |
+| 文件名   | 描述  |
 |---|---|
-| `pyproject.toml`  | Poetry project management file  |
-| `conftest.py`  | Pytest global test config file  |
-| `pytest.ini`  | Pytest CLI config file  |
-| `run.py`  | Sloth runner entry point  |
-| `sloth.yaml`  | Sloth config file  |
-| `.pre-commit-config.yaml`  | Git pre commit hooks & linters  |
+| `pyproject.toml`  | Poetry 项目管理文件  |
+| `conftest.py`  | Pytest 全局编程配置文件  |
+| `pytest.ini`  | Pytest 配置文件  |
+| `run.py`  | 执行器入口文件  |
+| `sloth.yaml`  | Sloth 配置文件  |
+| `.pre-commit-config.yaml`  | Git提交代码检查工具  |

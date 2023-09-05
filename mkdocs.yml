@@ -52,7 +52,6 @@ nav:
       - Installation: getting-started/installation.md
       - Project structure: getting-started/project-structure.md
       - The first case: getting-started/the-first-case.md
-      - Allure report: getting-started/allure-report.md
   - Guide:
       - Element locating: guide/element-locating.md
       - Task executor: guide/task-executor.md
