@@ -1,14 +1,15 @@
-# Introduction
+# 框架文档
 
-Welcome to the Sloth UI automation framework documentation.
+欢迎使用 Sloth UI 自动化测试框架.
 
 ----
 
-## What is Sloth
+## 框架简介
 
-## Why Sloth
+Sloth 基于 pytest 封装了 Appium Webdriver 定位及操作 UI 元素,
+融合了 Page Object Model 和 Screenplay Pattern 两种 UI 用例设计模式, 简单易用且功能丰富的自动化测试框架.
 
-## Main Features
+## 主要功能
 
 ## Pre-Requisite Knowledge
 
@@ -16,5 +17,3 @@ Welcome to the Sloth UI automation framework documentation.
 - Git
 - Page Object Model
 - Screenplay Pattern
-
-Read more on resource link.
