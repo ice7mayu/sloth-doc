@@ -16,8 +16,8 @@ Sloth 是一个基于 pytest 封装了 Appium Webdriver, 融合了 Page Object M
 - 无感知自动启动 Appium Server
 - 自动获取可用的连接设备
 - 支持多设备交互的测试场景
-- TTS语音指令模块
-- 实时采集CPU, 内存, 电池温度等性能数据
+- TTS 语音指令模块
+- 实时采集 CPU, 内存, 电池温度等性能数据
 - 集成 Allure 报告
 
 ## 相关技术
@@ -71,7 +71,7 @@ FAILED test_sample.py::test_answer - assert 4 == 5
 
 ### Page Object Model
 
-通过定义一些面向对象的类型, 来作为UI元素的仓库, 并且提供跟UI元素相关的操作, 来编写可读性好, 可复用且易于维护的测试用例.
+通过定义一些面向对象的类型, 来作为 UI 元素的仓库, 并且提供与 UI 元素交互的操作, 来编写可读性好, 可复用且易于维护的测试用例.
 通常用于 Selenium Web 应用自动化测试, 也适用于关键字驱动, 数据驱动或混合模式的框架中.
 
 ![pom](images/index/pom.svg)
@@ -79,6 +79,6 @@ FAILED test_sample.py::test_answer - assert 4 == 5
 ### Screenplay Pattern
 
 以具备某些能力(Abilities)的用户(Actor)为中心, 通过在系统中进行某些活动(Tasks), 并询问系统状态(Questions), 从而达成某个目标(Goal).
-能够按照业务的术语，借助易读的方法和对象API进行集成测试或验收测试.
+能够按照业务的术语, 借助易读的方法和对象API进行集成测试或验收测试.
 
 ![screenplay](images/index/screenplay.svg)

@@ -1,4 +1,4 @@
-# Sloth 项目结构
+# 项目结构
 
 本文档介绍项目目录和文件结构.
 
@@ -7,7 +7,7 @@
 | 目录名称   | 描述  |
 |---|---|
 | `sloth`  | Sloth 核心模块  |
-| `pom`  | POM模块  |
+| `pom`  | POM 相关模块  |
 | `task`  | Screenplay 任务模块  |
 | `lib`  | 通用函数模块  |
 | `tests`  | 测试用例模块  |
@@ -25,4 +25,4 @@
 | `pytest.ini`  | Pytest 配置文件  |
 | `run.py`  | 执行器入口文件  |
 | `sloth.yaml`  | Sloth 配置文件  |
-| `.pre-commit-config.yaml`  | Git提交代码检查工具  |
+| `.pre-commit-config.yaml`  | Git 提交代码检查工具  |
