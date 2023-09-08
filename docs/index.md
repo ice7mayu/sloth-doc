@@ -71,11 +71,11 @@ FAILED test_sample.py::test_answer - assert 4 == 5
 通过定义一些面向对象的类型, 来作为UI元素的仓库, 并且提供跟UI元素相关的操作, 来编写可读性好, 可复用且易于维护的测试用例.
 通常用于 Selenium Web 应用自动化测试, 也适用于关键字驱动, 数据驱动或混合模式的框架中.
 
-![pom](images/index/pom.jpg)
+![pom](images/index/pom.svg)
 
 ### Screenplay Pattern
 
 能够按照业务的术语，借助易读的方法和对象API进行集成测试或验收测试.
 以具备某些能力(Abilities)的用户(Actor)为中心, 通过在系统中进行某些活动(Tasks), 并询问系统状态(Questions), 从而达成某个目标(Goal).
 
-![screenplay](images/index/screenplay.png)
+![screenplay](images/index/screenplay.svg)
