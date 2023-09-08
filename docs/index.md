@@ -1,4 +1,4 @@
-# 框架文档
+# Sloth Framework
 
 欢迎使用 Sloth UI 自动化测试框架.
 
@@ -6,15 +6,16 @@
 
 ## 框架简介
 
-Sloth 基于 pytest 封装了 Appium Webdriver 定位及操作 UI 元素,
-融合了 Page Object Model 和 git-workflow svgtern 两种 UI 用例设计模式, 简单易用且功能丰富的自动化测试框架.
+Sloth 是一个基于 pytest 封装了 Appium Webdriver, 融合了 Page Object Model 和 Screenplay Pattern 两种 UI 用例设计模式, 简单易用且功能丰富的自动化测试框架.
+
+![sloth](images/index/sloth-framework.svg)
 
 ## 主要功能
 
 - 简洁且功能丰富的定位元素方法
 - 无感知自动启动 Appium Server
 - 自动获取可用的连接设备
-- 支持多设备交互测试场景
+- 支持多设备交互的测试场景
 - TTS语音指令模块
 - 实时采集CPU, 内存, 电池温度等性能数据
 - 集成 Allure 报告
@@ -29,14 +30,16 @@ Sloth 基于 pytest 封装了 Appium Webdriver 定位及操作 UI 元素,
 
 pytest 框架既可以用来编写小的单元测试, 又可以结合多种设计模式来应对功能更加复杂的应用程序测试.
 
-编写一个单元测试用例:
+例如, 编写一个单元测试, 首先定义一个待测函数
 
 ```python
-# 首先定一个待测函数(单元)
 def func(x):
     return x + 1
+```
 
-# 然后编写一条测试用例
+然后编写一条测试用例
+
+```python
 def test_answer():
     assert func(3) == 5
 ```
@@ -75,7 +78,7 @@ FAILED test_sample.py::test_answer - assert 4 == 5
 
 ### Screenplay Pattern
 
-能够按照业务的术语，借助易读的方法和对象API进行集成测试或验收测试.
 以具备某些能力(Abilities)的用户(Actor)为中心, 通过在系统中进行某些活动(Tasks), 并询问系统状态(Questions), 从而达成某个目标(Goal).
+能够按照业务的术语，借助易读的方法和对象API进行集成测试或验收测试.
 
 ![screenplay](images/index/screenplay.svg)
