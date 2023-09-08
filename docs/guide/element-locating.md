@@ -4,9 +4,7 @@
 
 以定位系统相机应用中的拍照按钮为例, 首先创建一个 `CameraPage` 类型来定位按钮元素并执行 `click` 事件:
 
-```python
-# pom/camerapage.py
-
+```python title="pom/camerapage.py"
 from sloth.locator import UiSelector
 from sloth.log import log
 from . import PadPage
@@ -23,8 +21,7 @@ class CameraPage(PadPage):
 
 然后在对应的任务模块中实例化 `CameraPage` 类型来完成拍照任务:
 
-```python
-# task/cameratask.py
+```python title="task/cameratask.py"
 
 from lib.actor import PadActor
 from pom.camerapage import CameraPage

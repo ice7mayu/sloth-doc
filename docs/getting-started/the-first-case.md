@@ -11,7 +11,7 @@
 
 首先创建一个 `CameraApp` 类型, 继承于 `PadApp` 类型, 来作为一个上下文管理器, 提供有关 Appium server 和设备相关的信息和数据:
 
-```python
+```python title="camera_app.py"
 class CameraApp(PadApp):
     name = "System Camera App"
     app_package = "com.mediatek.camera"
@@ -22,7 +22,7 @@ class CameraApp(PadApp):
 
 然后创建一个 `CameraPage` 类型, 用来封装对元素的定位和执行一些基础的动作, 例如: 点击事件等:
 
-```python
+```python title="camerapage.py"
 from sloth.locator import UiSelector
 from sloth.log import log
 
@@ -46,8 +46,7 @@ class CameraPage(PadPage):
 
 在任务模块中, 首先定一个清除相册的任务 `clear_media`:
 
-```python
-# cameratask.py
+```python title="cameratask.py"
 
 from lib.actor import PadActor
 from sloth import adbutil
@@ -65,7 +64,7 @@ def clear_media(actor: PadActor):
 
 然后定义一个拍摄照片的任务 `take_pictures`:
 
-```python
+```python title="cameratask.py"
 def take_pictures(actor: PadActor):
     """take pictures"""
     
@@ -75,7 +74,7 @@ def take_pictures(actor: PadActor):
 
 最后再定义一个检验任务, 用来验证相册中是否存在一张照片 `see_photos`:
 
-```python
+```python title="cameratask.py"
 def see_photos(actor: PadActor):
     """should see photos in the gallery"""
     
@@ -93,8 +92,7 @@ def see_photos(actor: PadActor):
 
 定义一个 pytest 测试方法, 创建一个 `Actor` 作为整个用例的上下文管理者, 尝试执行预定义的任务, 并验证执行结果是否符合预期:
 
-```python
-# test_camera.py
+```python title="test_camera.py"
 
 from task import cameratask
 

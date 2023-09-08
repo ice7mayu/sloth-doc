@@ -3,7 +3,7 @@
 通常 `Actor` 尝试执行某些任务并验证结果是否符合预期. 如果某项任务需要被执行多次, 可以使用 `executor` 装饰器来完成这项工作.
 例如, 重复执行 `cameratask.take_pictures` 这项任务:
 
-```python
+```python hl_lines="11"
 from lib.actor import PadActor
 from sloth.benchmark import Benchmark
 from sloth.dec import executor

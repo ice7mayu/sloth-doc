@@ -18,9 +18,7 @@ assert device.udid
 
 如果想获取特定的设备, 首先需要在 `sloth.yaml` 中配置设备UDID:
 
-```yaml
-# content of sloth.yaml
-
+```yaml title="sloth.yaml"
 devices: ["UDID_0", "UDID_1"]
 ```
 
