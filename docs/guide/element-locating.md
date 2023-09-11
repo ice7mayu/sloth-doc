@@ -31,7 +31,7 @@ def take_picture(actor: PadActor):
     camera_page.click_shutter()
 ```
 
-## 常用的定位元素方法
+## 定位元素方法
 
 使用 `resource_id` 定位元素:
 
