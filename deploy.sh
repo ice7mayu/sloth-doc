@@ -1,5 +1,5 @@
 # !/bin/bash
 
-poetry run mkdocs build
-ssh root@192.168.237.178 "rm -rf /usr/share/nginx/sloth-doc/*"
-scp -r ./public/* root@192.168.237.178:/usr/share/nginx/sloth-doc/
+poetry run mkdocs build -c
+ssh root@10.254.12.55 "rm -rf /home/robot/sloth-doc/*"
+scp -r -O ./public/* root@10.254.12.55:/home/robot/sloth-doc/
