@@ -1,6 +1,9 @@
 site_name: Sloth Framework
+site_author: MaYu
 site_dir: public
 site_url: http://mayu08.gitpages.zuoyebang.cc/sloth-doc
+repo_url: https://git.zuoyebang.cc/mayu08/zpad
+repo_name: Gitlab
 
 copyright: Copyright &copy; 2022 maintained by MaYu
 
